@@ -3,7 +3,9 @@ import fetch from 'node-fetch';
 
 async function getFormulaOneDrivers(){
     try {
-
+        const response = await fetch('https://www.formula1.com/en/drivers.html');
+        const body = await response.text();
+        console.log(body)
     } catch (error) {
         console.log(error);
     }
