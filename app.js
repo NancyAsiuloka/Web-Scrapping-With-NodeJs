@@ -7,8 +7,8 @@ async function getFormulaOneDrivers(){
         const body = await response.text();
         const $ = cheerio.load(body);
 
-        const wrapper = $('.listing-items--wrapper')
-        console.log(wrapper.length);
+        // const wrapper = $('.listing-items--wrapper')
+        // console.log(wrapper.length);
 
     } catch (error) {
         console.log(error);
