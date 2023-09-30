@@ -17,6 +17,8 @@ async function getFormulaOneDrivers(){
             const points = $(el).find('.points > .f1-wide--s').text();
             const firstName = $(el).find('.listing-item--name span:first').text();
             const lastName = $(el).find('.listing-item--name span:last').text();
+            const team = $(el).find('.listing-item--team').text();
+            const photo = $(el).find('.listing-item--photo img').text();
             console.log(lastName);
         })
 
