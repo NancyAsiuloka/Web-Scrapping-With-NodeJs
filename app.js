@@ -1,5 +1,6 @@
 import * as cheerio from 'cheerio';
 import fetch from 'node-fetch';
+import fs from 'fs';
 
 async function getFormulaOneDrivers(){
     try {
@@ -30,7 +31,10 @@ async function getFormulaOneDrivers(){
             });
         });
 
-        console.log(items)
+        fs.writeFile('formula1.json', JSON.stringify(items), function(err){
+            if (err) return console.log(err);
+            console.log('Formula 1 Drivers where saved as: formula1.json');
+        })
 
 
     } catch (error) {
